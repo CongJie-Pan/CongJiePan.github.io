@@ -6,3 +6,8 @@ sitemap: false
 @charset "utf-8";
 
 @import "so-simple";
+
+.site-logo {
+  width: 500px;  // 設定寬度
+  height: auto;  // 保持圖片比例
+}
