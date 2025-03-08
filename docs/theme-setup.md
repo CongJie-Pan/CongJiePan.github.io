@@ -106,7 +106,7 @@ A quick checklist of the files you'll want to edit to get up and running.
 
 The title of your site... shocker!
 
-Example `title: My Awesome Site`
+Example `title:CongJie Pan`
 
 #### logo
 
