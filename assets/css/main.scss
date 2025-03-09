@@ -7,7 +7,140 @@ sitemap: false
 
 @import "so-simple";
 
+/* 響應式設計 */
+:root {
+  --content-width: min(90vw, 900px);
+  --padding-mobile: 0.5rem;
+  --padding-desktop: 2rem;
+}
+
+/* 調整內容寬度和置中 */
+.page-wrapper {
+  max-width: 100% !important;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.main-content {
+  width: var(--content-width) !important;
+  max-width: var(--content-width) !important;
+  padding: 0 var(--padding-desktop);
+  margin: 0 auto;
+}
+
+/* 確保內容區塊也置中 */
+.site-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.page-content,
+.entry-content {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+/* 文字和間距設定 */
+.page-content p, 
+.page-content li,
+.entry-content p,
+.entry-content li {
+  line-height: 1.8;
+  margin-bottom: 1.5em;
+  font-size: 16px;
+}
+
+.page-content h2,
+.page-content h3,
+.entry-content h2,
+.entry-content h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+}
+
+/* 列表項目設定 */
+.page-content ul,
+.entry-content ul {
+  margin-bottom: 1.5em;
+  padding-left: 1em;
+}
+
+.page-content ul li,
+.entry-content ul li {
+  margin-bottom: 0.5em;
+}
+
+/* Logo 設定 */
 .site-logo {
-  width: 500px;  // 設定寬度
-  height: auto;  // 保持圖片比例
+  width: min(80vw, 300px);
+  height: auto;
+}
+
+/* 手機版適配 */
+@media screen and (max-width: 768px) {
+  .main-content {
+    padding: 0 var(--padding-mobile);
+    margin-left: 0;
+    width: 100% !important;
+  }
+
+  .page-content,
+  .entry-content {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .page-content p, 
+  .page-content li,
+  .entry-content p,
+  .entry-content li {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1em;
+  }
+
+  .page-content h2,
+  .page-content h3,
+  .entry-content h2,
+  .entry-content h3 {
+    margin-top: 1.2em;
+    margin-bottom: 0.6em;
+  }
+
+  /* 調整列表縮進 */
+  .page-content ul,
+  .entry-content ul {
+    padding-left: 1.2em;
+    margin-left: 0;
+  }
+
+  /* 調整子列表的間距 */
+  .page-content ul ul,
+  .entry-content ul ul {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+  }
+}
+
+/* 超小螢幕適配 */
+@media screen and (max-width: 480px) {
+  :root {
+    --padding-mobile: 0.3rem;
+  }
+
+  .main-content {
+    padding: 0 var(--padding-mobile);
+  }
+
+  .page-content p, 
+  .page-content li,
+  .entry-content p,
+  .entry-content li {
+    font-size: 14px;
+  }
 }
