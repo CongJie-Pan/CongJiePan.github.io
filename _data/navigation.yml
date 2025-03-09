@@ -1,7 +1,8 @@
 # Sample site navigation bar links
 
-- title: Home
-  url: /
+# 暫時隱藏Home選單，需要時可以取消註釋恢復
+# - title: Home
+#   url: /
 # - title: Posts
 #   url: /posts/
 # - title: Categories

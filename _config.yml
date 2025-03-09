@@ -130,7 +130,3 @@ footer_links:
 # Posts settings
 posts_limit: 0  # 設為 0 來限制顯示的文章數量
 
-# Home page settings
-show_posts: false
-home_posts_limit: 0
-
