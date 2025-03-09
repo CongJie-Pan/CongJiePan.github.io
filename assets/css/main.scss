@@ -12,6 +12,9 @@ sitemap: false
   --content-width: min(90vw, 900px);
   --padding-mobile: 0.5rem;
   --padding-desktop: 2rem;
+  --base-font-size: 18px;        /* 基礎字體大小 */
+  --mobile-font-size: 16px;      /* 手機版字體大小 */
+  --small-screen-font-size: 15px; /* 超小螢幕字體大小 */
 }
 
 /* 調整內容寬度和置中 */
@@ -51,7 +54,7 @@ sitemap: false
 .entry-content li {
   line-height: 1.8;
   margin-bottom: 1.5em;
-  font-size: 16px;
+  font-size: var(--base-font-size);
 }
 
 .page-content h2,
@@ -60,7 +63,7 @@ sitemap: false
 .entry-content h3 {
   margin-top: 1.5em;
   margin-bottom: 0.8em;
-  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  font-size: clamp(1.4rem, 4vw, 1.8rem);  /* 增加標題大小 */
 }
 
 /* 列表項目設定 */
@@ -99,7 +102,7 @@ sitemap: false
   .page-content li,
   .entry-content p,
   .entry-content li {
-    font-size: 15px;
+    font-size: var(--mobile-font-size);
     line-height: 1.6;
     margin-bottom: 1em;
   }
@@ -141,6 +144,6 @@ sitemap: false
   .page-content li,
   .entry-content p,
   .entry-content li {
-    font-size: 14px;
+    font-size: var(--small-screen-font-size);
   }
 }
